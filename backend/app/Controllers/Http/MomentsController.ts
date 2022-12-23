@@ -36,7 +36,7 @@ export default class MomentsController {
   }
 
   public async index() {
-    const moments = await Moment.all()
+    const moments = await Moment.query().preload('comments')
     return {
       data: moments,
     }
@@ -46,6 +46,8 @@ export default class MomentsController {
     const { id } = request.params()
 
     const moment = await Moment.findOrFail(id)
+    await moment.load('comments')
+
     response.status(200)
     return { data: moment }
   }
