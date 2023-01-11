@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-new-moment',
-  templateUrl: './new-moment.component.html',
-  styleUrls: ['./new-moment.component.scss']
+    selector: "app-new-moment",
+    templateUrl: "./new-moment.component.html",
+    styleUrls: ["./new-moment.component.scss"],
 })
 export class NewMomentComponent {
-
+    btnText: string = "Share!";
 }

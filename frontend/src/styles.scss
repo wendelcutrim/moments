@@ -28,3 +28,74 @@ body {
 main.container {
     min-height: 65vh;
 }
+
+/* FORM */
+
+form {
+    width: 70%;
+    margin: 0 auto;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &:nth-child(1) {
+            margin-top: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.6rem;
+            color: #777;
+            font-size: 0.8rem;
+            margin-bottom: 1.7rem;
+        }
+
+        textarea {
+            min-height: 7rem;
+            resize: vertical;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            width: 40%;
+            background-color: #efefef;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                color: #dec129;
+                border: 1px solid #dec129;
+                background-color: transparent;
+            }
+        }
+
+        input#image {
+            padding: 0;
+        }
+    }
+
+    button[type="submit"] {
+        background-color: #efefef;
+        border: 2px solid transparent;
+        padding: 1rem;
+        font-size: 1.1rem;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            color: #dec129;
+            border-color: #dec129;
+            background-color: transparent;
+        }
+    }
+}
