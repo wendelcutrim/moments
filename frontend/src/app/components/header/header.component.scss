@@ -1,0 +1,47 @@
+section {
+    width: 100%;
+    border-bottom: 1px solid #777;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+    .brand,
+    .links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .brand {
+        img {
+            width: 40px;
+            margin-right: 0.6rem;
+        }
+
+        h2 {
+            transition: 0.4s;
+        }
+
+        &:hover {
+            color: #dec129;
+        }
+    }
+
+    .links {
+        gap: 0.8rem;
+
+        a {
+            padding: 0.1rem 0.3rem;
+        }
+    }
+
+    #add {
+        a:hover {
+            background-color: #efefef;
+        }
+    }
+}
