@@ -55,6 +55,8 @@ form {
             padding: 0.6rem;
             color: #777;
             font-size: 0.8rem;
+        }
+        &:not(.validation-error) {
             margin-bottom: 1.7rem;
         }
 
@@ -96,6 +98,17 @@ form {
             color: #dec129;
             border-color: #dec129;
             background-color: transparent;
+        }
+    }
+
+    .validation-error {
+        margin-bottom: 1.7rem;
+
+        p {
+            color: #dc3545;
+            margin-top: 0.4rem;
+            border-left: 3px solid #dc3545;
+            padding-left: 0.2rem;
         }
     }
 }
