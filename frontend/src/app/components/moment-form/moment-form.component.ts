@@ -1,5 +1,6 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import Moment from "src/app/interface/Moment";
 
 @Component({
     selector: "app-moment-form",
@@ -7,11 +8,12 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
     styleUrls: ["./moment-form.component.scss"],
 })
 export class MomentFormComponent {
+    @Output() onSubmit = new EventEmitter<Moment>();
     @Input() btnText!: string;
 
     momentForm!: FormGroup;
 
-    //Inicializando o formulário, não usamos o construtor pois estamos utilizando o anruglar.
+    //Inicializando o formulário, não usamos o construtor pois estamos utilizando o angular.
     ngOnInit(): void {
         this.momentForm = new FormGroup({
             id: new FormControl(""),
@@ -29,8 +31,15 @@ export class MomentFormComponent {
         return this.momentForm.get("description")!;
     }
 
-    onSubmit() {
+    onFileSelected(event: any) {
+        const file: File = event.target.files[0];
+        this.momentForm.patchValue({ image: file });
+    }
+
+    submit() {
         if (this.momentForm.invalid) return;
-        console.log("Send the form");
+        console.log(this.momentForm.value);
+
+        this.onSubmit.emit(this.momentForm.value);
     }
 }
