@@ -112,3 +112,62 @@ form {
         }
     }
 }
+
+/*buttons */
+.edit-btn,
+.remove-btn {
+    border: 1px solid #efefef;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s all;
+    font-size: 1rem;
+}
+
+.edit-btn {
+    button {
+        background: none;
+        border: none;
+        font-size: 1rem;
+    }
+
+    path {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    &:hover {
+        color: white;
+        background-color: #007bff;
+
+        path {
+            color: white;
+        }
+
+        button {
+            color: white;
+        }
+    }
+}
+
+.remove-btn {
+    path {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+    &:hover {
+        color: white;
+        background-color: #dc3545;
+
+        path {
+            color: white;
+        }
+    }
+}
+
+button fa-icon,
+a fa-icon {
+    margin-right: 0.2rem;
+}

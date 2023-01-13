@@ -1,0 +1,75 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+.moments-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.moment {
+    width: 32%;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    h3,
+    p {
+        margin-bottom: 1rem;
+    }
+
+    .date {
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    a {
+        color: #dec129;
+        padding: 0.3rem 0.6rem;
+
+        &:hover {
+            background-color: #efefef;
+        }
+    }
+}
+
+.search-container {
+    margin-bottom: 2rem;
+    width: 100%;
+
+    form {
+        text-align: center;
+
+        div {
+            position: relative;
+        }
+
+        fa-icon {
+            position: absolute;
+            top: 6px;
+            margin-left: 5px;
+        }
+
+        input {
+            text-align: center;
+            padding: 0.3rem;
+            width: 30%;
+        }
+    }
+}
