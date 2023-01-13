@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { NewMomentComponent } from './new-moment.component';
+import { NewMomentComponent } from "./new-moment.component";
 
-describe('NewMomentComponent', () => {
-  let component: NewMomentComponent;
-  let fixture: ComponentFixture<NewMomentComponent>;
+describe("NewMomentComponent", () => {
+    let component: NewMomentComponent;
+    let fixture: ComponentFixture<NewMomentComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ NewMomentComponent ]
-    })
-    .compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            declarations: [NewMomentComponent],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(NewMomentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+        fixture = TestBed.createComponent(NewMomentComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it("should create", () => {
+        expect(component).toBeTruthy();
+    });
 });
