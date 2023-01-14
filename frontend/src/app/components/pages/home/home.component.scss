@@ -73,3 +73,30 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .search-container {
+        form {
+            input {
+                width: 80%;
+            }
+        }
+    }
+
+    .moments-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .moment {
+            width: 80%;
+            border: 1px solid black;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+
+            img {
+                border-radius: 8px 8px 0 0;
+            }
+        }
+    }
+}
