@@ -48,7 +48,11 @@
 
         <div class="comments_form">
             <h3>Comment this publication</h3>
-            <form>
+            <form
+                [formGroup]="commentForm"
+                #formDir="ngForm"
+                (ngSubmit)="onSubmit(formDir)"
+            >
                 <div class="form-group">
                     <label for="text">Comment</label>
                     <textarea
@@ -56,7 +60,17 @@
                         id="text"
                         placeholder="Insert your comment"
                         required
+                        formControlName="text"
                     ></textarea>
+
+                    <div
+                        *ngIf="text.invalid && formDir.submitted"
+                        class="validation-error"
+                    >
+                        <p *ngIf="text.errors?.['required']">
+                            Description is required!
+                        </p>
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -67,7 +81,16 @@
                         id="username"
                         placeholder="Insert yor name"
                         required
+                        formControlName="username"
                     />
+                    <div
+                        *ngIf="username.invalid && formDir.submitted"
+                        class="validation-error"
+                    >
+                        <p *ngIf="username.errors?.['required']">
+                            Username is required!
+                        </p>
+                    </div>
                 </div>
 
                 <button type="submit">Comment!</button>
