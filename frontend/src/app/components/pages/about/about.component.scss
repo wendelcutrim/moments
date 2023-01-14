@@ -1,0 +1,12 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+
+    a {
+        text-decoration: underline;
+    }
+}

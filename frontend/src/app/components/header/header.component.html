@@ -1,0 +1,43 @@
+<section>
+    <nav class="container">
+        <a class="brand" routerLink="/">
+            <img src="/assets/moments.png" alt="Moments Logo" />
+        </a>
+
+        <ul class="links">
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+
+            <li id="add">
+                <a routerLink="/moments/new">Share a New Moment</a>
+            </li>
+
+            <li>
+                <a routerLink="/about">About</a>
+            </li>
+        </ul>
+        <button class="menu-mobile" (click)="handleMobileMenu()">
+            <fa-icon [icon]="mobileMenuIcon"></fa-icon>
+        </button>
+    </nav>
+
+    <article class="menu-mobile_links" *ngIf="showMobileMenu">
+        <ul class="links_mobile">
+            <li>
+                <a routerLink="/">Home</a>
+            </li>
+
+            <li id="add">
+                <a routerLink="/moments/new">Share a New Moment</a>
+            </li>
+
+            <li>
+                <a routerLink="/about">About</a>
+            </li>
+            <button class="menu-mobile_close" (click)="handleMobileMenu()">
+                <fa-icon [icon]="closeMenuIcon"></fa-icon>
+            </button>
+        </ul>
+    </article>
+</section>

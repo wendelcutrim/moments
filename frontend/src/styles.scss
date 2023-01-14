@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #444;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+    a {
+        text-decoration: none;
+        color: #444;
+        transition: 0.4s;
+
+        &:hover {
+            color: #dec129;
+        }
+    }
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main.container {
+    min-height: 65vh;
+}
+
+/* FORM */
+
+form {
+    width: 70%;
+    margin: 0 auto;
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &:nth-child(1) {
+            margin-top: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 0.4rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.6rem;
+            color: #777;
+            font-size: 0.8rem;
+        }
+        &:not(.validation-error) {
+            margin-bottom: 1.7rem;
+        }
+
+        textarea {
+            min-height: 7rem;
+            resize: vertical;
+        }
+
+        input[type="file"]::-webkit-file-upload-button {
+            width: 40%;
+            background-color: #efefef;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            transition: 0.4s;
+
+            &:hover {
+                color: #dec129;
+                border: 1px solid #dec129;
+                background-color: transparent;
+            }
+        }
+
+        input#image {
+            padding: 0;
+        }
+    }
+
+    button[type="submit"] {
+        background-color: #efefef;
+        border: 2px solid transparent;
+        padding: 1rem;
+        font-size: 1.1rem;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.4s;
+
+        &:hover {
+            color: #dec129;
+            border-color: #dec129;
+            background-color: transparent;
+        }
+    }
+
+    .validation-error {
+        margin-bottom: 1.7rem;
+
+        p {
+            color: #dc3545;
+            margin-top: 0.4rem;
+            border-left: 3px solid #dc3545;
+            padding-left: 0.2rem;
+        }
+    }
+}
+
+/*buttons */
+.edit-btn,
+.remove-btn {
+    border: 1px solid #efefef;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0 0.5rem;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s all;
+    font-size: 1rem;
+}
+
+.edit-btn {
+    button {
+        background: none;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    path {
+        border-color: #007bff;
+        color: #007bff;
+    }
+
+    &:hover {
+        color: white;
+        background-color: #007bff;
+
+        path {
+            color: white;
+        }
+
+        button {
+            color: white;
+        }
+    }
+}
+
+.remove-btn {
+    path {
+        border-color: #dc3545;
+        color: #dc3545;
+    }
+
+    &:hover {
+        color: white;
+        background-color: #dc3545;
+
+        path {
+            color: white;
+        }
+    }
+}
+
+button fa-icon,
+a fa-icon {
+    margin-right: 0.2rem;
+}

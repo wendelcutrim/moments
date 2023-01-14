@@ -1,0 +1,39 @@
+<section class="home-container">
+    <h1>Shared Moments!</h1>
+
+    <!-- Search form -->
+    <article class="search-container">
+        <form>
+            <div>
+                <fa-icon [icon]="faSearch"></fa-icon>
+                <input
+                    type="text"
+                    placeholder="search a moment"
+                    (input)="search($event)"
+                />
+            </div>
+        </form>
+    </article>
+
+    <article *ngIf="moments.length > 0; else noMoments">
+        <div class="moments-container">
+            <div class="moment" *ngFor="let moment of moments">
+                <img
+                    src="{{ baseApiUrl }}/uploads/{{ moment.image }}"
+                    alt="{{ moment.title }}"
+                />
+                <h3>{{ moment.title }}</h3>
+                <p class="date">{{ moment.created_at }}</p>
+                <p>Comments: {{ moment.comments!.length }}</p>
+                <p>
+                    <a routerLink="/moments/{{ moment.id }}">Details</a>
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <ng-template #noMoments>
+        <h1>No shared moments!</h1>
+        <a routerLink="/moments/new">Share a moment</a>
+    </ng-template>
+</section>
