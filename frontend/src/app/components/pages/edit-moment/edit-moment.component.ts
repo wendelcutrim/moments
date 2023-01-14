@@ -28,7 +28,7 @@ export class EditMomentComponent implements OnInit {
         });
     }
 
-    async editHandler(momentData: Moment) {
+    async editHandler(momentData: Moment): Promise<void> {
         const id = this.moment.id;
         const formData = new FormData();
 
